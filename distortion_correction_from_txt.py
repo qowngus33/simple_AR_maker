@@ -1,5 +1,6 @@
 import numpy as np
 import cv2 as cv
+from load_camera_parameter import camera_parameter_load
 
 if __name__ == "__main__":
     # The given video and calibration data
@@ -7,29 +8,7 @@ if __name__ == "__main__":
 
     # Results saved from camera calibration
     file_name = "result/calibration_results.txt"
-
-    # 데이터 불러오기
-    rms = None
-    K = []
-    dist_coeff = []
-
-    try:
-        with open(file_name, "r") as file:
-            for line in file:
-                if line.startswith("RMS:"):
-                    rms = float(line.split(":")[1].strip())
-                elif line.startswith("Camera matrix (K):"):
-                    for _ in range(3):
-                        K.append(list(map(float, file.readline().strip().split())))
-                elif line.startswith("Distortion coefficient:"):
-                    dist_coeff = list(map(float, file.readline().strip().split()))
-    except FileNotFoundError as e:
-        print(f"Error: {e}")
-        print("File not found. Check file path or run camera calibration first!")
-
-    print("Loaded RMS:", rms)
-    print("Loaded Camera matrix (K):", K)
-    print("Loaded Distortion coefficient:", dist_coeff)
+    K, dist_coeff = camera_parameter_load(file_name)
 
     K = np.array(K)
     dist_coeff = np.array(dist_coeff)
