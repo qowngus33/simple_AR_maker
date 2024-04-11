@@ -1,12 +1,12 @@
 # simple_AR_maker
 ### File description
-* camera_calibrate_to_txt.py
+* __camera_calibrate_to_txt.py__
   - Caculate camera parameters using chessboard video and save them into a text file
-* load_camera_parameter.py
+* __load_camera_parameter.py__
   - read camera parameters txt file and return them as a np array
-* distortion_correction_from_txt.py
+* __distortion_correction_from_txt.py__
   - show distortion correction applied to a video
-* sample_point_from_orbit.py
+* __sample_point_from_orbit.py__
   - sample points in an orbit
-* pose_estimation.py
+* __pose_estimation.py__
   - project 3D points into 2D image space 
