@@ -12,6 +12,7 @@
   - project 3D points into 2D image space
  
 ### Results
+- sample points from orbit and rotate them using rotation matrix
 ![vllo](https://github.com/qowngus33/simple_AR_maker/assets/83813866/b8adda79-f421-4782-9602-8083d69a908e)
 
 
