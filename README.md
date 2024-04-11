@@ -9,4 +9,9 @@
 * __sample_point_from_orbit.py__
   - sample points in an orbit
 * __pose_estimation.py__
-  - project 3D points into 2D image space 
+  - project 3D points into 2D image space
+ 
+### Results
+![vllo](https://github.com/qowngus33/simple_AR_maker/assets/83813866/b8adda79-f421-4782-9602-8083d69a908e)
+
+
